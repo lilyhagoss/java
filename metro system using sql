@@ -1,0 +1,224 @@
+public class Book {
+String name;
+int pages
+String genre;
+}
+
+//constructor goes here//
+
+
+
+
+//book driver 
+
+Book book1 = new Book();
+Book book2 = new Book();
+Book book3 = new Book();
+Book book4 = new Book();
+Book book5 = new Book();
+Book book6 = new Book();
+Book book7 = new Book();
+ArrayList <book> bookList = new ArrayList <Book> ();
+bookList.add(book1);
+bookList.add(book2);
+bookList.add(book3);
+Class notes 
+cityList.add("Charlotte");
+
+
+ String [] array = ("red", "green");
+  Arrays.sort(array);
+ 
+ Arraylist colorList = new ArrayList <<(Arrays.asList(array));
+ Collections.sort(colorList);
+ 
+ colorList.get(0)
+ 
+ 
+  Box box 1 = new Box ();
+		   Box box 2 = new Box ();
+		   
+		   Box[] boxArray = new Box[10];
+		   boxArray[0] = box1;
+		   ArrayList<Box> boxList - new ArrayList<Box> ();
+
+
+public class Book {
+  private List<Book> collection;
+
+	public Library(){
+		collection = new ArrayList<Book>();
+	}
+	
+	public void addBook(Book book){
+		collection.add(book);
+	}
+
+
+public class Book {
+  public Library(){
+		collection = new ArrayList<Book>();
+      alist.add("book 1");
+      alist.add("book 2");
+      alist.add("book 3");
+      alist.add("book 4");
+      alist.add("book 5");
+      alist.add("book 6");
+	  book book 1 = new book (); 
+	  book book 2 = new book ();
+	  book book 3 = new book ();
+	  book book 4 = new book ();
+	  book book 5 = new book ();
+	  book book 6 = new book (); 
+	  Book () bookArray = newBook ["Harry Potter and the Sorcer's stone");
+	   bookArray ["Harry Potter and the Sorcer's stone"] = BookArray1;
+	    ArrayList<Book> bookList - new ArrayList<Book> ();
+      collections.sort(
+      System.out.println("book 1");
+  
+   }  
+}
+}
+public class Book {
+String name;
+int pages
+String genre;
+}
+
+//constructor goes here//
+
+
+
+
+//book driver 
+
+Book book1 = new Book();
+Book book2 = new Book();
+Book book3 = new Book();
+Book book4 = new Book();
+Book book5 = new Book();
+Book book6 = new Book();
+Book book7 = new Book();
+ArrayList <book> bookList = new ArrayList <Book> ();
+bookList.add(book1);
+bookList.add(book2);
+bookList.add(book3);
+public static void main(String[] args) {
+		while (running) {
+			System.out.println("\nEnter 0 for load a library."
+					+ "\nEnter 1 for save and quit"
+					+ "\nEnter 2 for list all books in library"
+					+ "\nEnter 3 for add book to library");
+
+public class Account {
+         //main method//
+	  account.withdraw (4);
+	  account.withdraw (2);
+	//attribute
+	private int id;
+	private String name;
+	private Address address;
+	private String accountType;
+    private double balance;
+    ArrayList <Transaction > transactionList = new ArrayList <Transaction>();
+    
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+this.address = address;
+	}
+
+	public String getAccountType() {
+		return accountType;
+	}
+
+	public void setAccountType(String accountType) {
+		this.accountType = accountType;
+	}
+
+	public double getBalance() {
+		return balance;
+	}
+     
+	
+
+	public void deposit(double deposit){
+		
+		balance = balance + deposit;
+		Transaction t2 = new Transaction("deposit ", deposit, balance , " checking ", new Date());
+		transactionList.add(t2);
+	}
+	
+	public double withdraw(double amount){
+		
+		balance = balance - amount;
+		Transaction t1 = new Transaction("withdraw ", amount, balance,  " checking ", new Date());
+		transactionList.add(t1);
+		return balance;
+		
+	}
+	public double getMonthlyInterest () {
+	 return balance * (annualInterestRate / 1200);
+	 
+	 public 
+
+	public ArrayList<Transaction> getTransactionList() {
+		return transactionList;
+	}
+ublic void setTransactionList(ArrayList<Transaction> transactionList) {
+		this.transactionList = transactionList;
+	}
+
+	public void setBalance(double balance2) {
+		this.balance = balance2;
+		
+	}
+    public void withdraw (double amount) {
+    balance = amount; 
+    transactions.add(new Transaction('W', amount, balance, ""));
+   }
+   
+   public void deposit(double amount) {
+  balance -= amount;
+   transactions.add(new Transaction('0', amount, balance, ""));
+}
+}
+
+public class Transaction {
+	
+	 private java.util.Date date; 
+	 private char type;
+	String transactionType;
+	double transactionAmount;
+	double balance;
+	String transactionAccountType;
+	Date transactionDate;
+	
+	
+	public Transaction(String transactionType, double amount, double balance, String transactionAccountType, Date date) {
+		this.transactionType = transactionType;
+		this.transactionAmount = amount;
+		this.balance = balance;
+		this.transactionAccountType = transactionAccountType;
+		this.transactionDate = date;
+	}
+
+}
+
+
+
+
+
+
+
+
