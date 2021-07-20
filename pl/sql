@@ -1,0 +1,81 @@
+Create table college(
+campus_id int ,
+major varchar(40) ,
+gpa float,
+age int,
+first_name varchar(50),
+last_name varchar(70),
+num_class int,
+primary key(campus_id));
+create table course(
+c_id int,
+campus_id int,
+c_title varchar(60),
+professor varchar(70),
+primary key(c_id),
+FOREIGN KEY (campus_id) REFERENCES college(campus_id));
+
+select * from (college);
+
+
+
+
+insert into college values(56462,'physics',3.6,21,'will','smith',4);
+insert into college values(64843,'bioinformatics',3.3,19,'tim','howard',5);
+insert into college values(78481,'english',3.5,19,'mite','boil',5);
+insert into college values(97943,'math',3.1, 19,'pile','smith',5);
+insert into course values(364873,95163,'chem 101','vaninja');
+insert into course values(364872,64843,'chem 101','vaninja');
+insert into course values(364871,56321,'chem 101','vaninja');
+insert into course values(312546,97943,'math 166','tumy');
+Sql code: example 2: customer/inventory
+create table customer (
+Cust_id int not null,
+Cust_name varchar(30) not null,
+Street varchar(30) not null,
+Zip int not null,
+Cust_phone varchar (30) not null,
+Balance number not null,
+PRIMARY KEY (cust_id));
+Desc customer
+
+Create table inventory (
+  I_id int not NULL, 
+ Movie or tv varchar (30) not null,
+ Dvd or tape varchar(30) not null,
+ Director varchar (30) not null,
+ Lead_actor varchar (30) not null,
+ Genre varchar (30) not null,
+ release _date date not null,
+ Num_in_stock int not null;
+Price number not null;
+PRIMARY KEY (i_id));
+desc inventory;
+Select *
+From Customerc, OrdersO
+Where C.CID=O.CID
+
+Query, descriptin of table and output of table
+
+Group by Online vs instore orders
+
+
+Select Order_type
+	From Transaction 
+	Group by Order_type
+	
+Which customer spends the most money 
+	select First_name, Last_name, count(*) as Order_total
+	from Customer c, Transaction t
+	where c.Membership_id=t.membership_id
+	group by First_name, Last_name
+	order by order_total desc 
+Rank based on product price
+	Select * from Product order by P_price;
+
+	Group items are being bought the most
+	select P_name, count(*) as Product_quantity
+	from Product p, TransactionDetail d
+	where p.Product_id=d.Product_id
+	group by P_name
+	order by Max(Product_quantity)
