@@ -1,0 +1,158 @@
+The excerpt code for customer is as follows:
+     Public Sub New(firstname As String,
+                    lastname As String,
+                    email As String)
+        Me.m_firstname = firstname
+        Me.m_lastname = lastname
+        Me.m_email = email
+uery for listing  customers
+ Public Function GetCustomers(ByVal As Integer, ByVal As Integer) As List(Of Customers)
+        Dim customers As List(Of Customer) = GetCustomers()
+        Dim returnCustomers = From customernames In Form1
+        If returnCustomers.Count = 0 Then Return Nothing
+        Return returnCustomers
+
+        query for listing customers based on the state they're from 
+ Public Function GetState(ByVal As Integer, ByVal As Integer) As List(Of States)
+        Dim state As List(Of StateChangeEventArgs) = GetCustomersState()
+        Dim state = From cust In customers
+                Order By cust.state, cust.City
+                Group By StateName = cust.State
+                Into CustomersInState = Group, Count()
+                Order By StateName
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim CustomerID As String
+
+        CustomerID = InputBox("Please Enter The Customer ID.", "Customer ID")
+        Dim orderStatus As String
+        If orderStatus Is processed Then
+            orderStatus = Show("order is processed")
+            If orderStatus Is scheduled Then
+                orderStatus = Show("order is scheduled for delivery")
+                If orderStatus = Show("order is delievered") Then
+                    orderStatus = Show("order has been delievered")
+                End If
+            End If
+        End If
+        orderStatus = InputBox("The status of of your order is")
+        Dim CustomerName As String
+        CustomerName = InputBox("Please Enter THe Customer Name.", "Customer Name")
+        Dim CustomerGender As String
+        CustomerGendrPublic Class Order
+
+   Public OrderLines As List(Of orderline)
+
+        Private _totalcost As Decimal
+
+   Public Function TotalCost() As Decimal
+
+        Get
+            Dim t As Decimal
+            For Each l In OrderLines
+                t = t + (l.Value * l.Qty)
+            Next
+            Return t
+        End Get
+
+        EndFunction
+
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs)
+
+    End Sub
+    Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedIndexChanged
+        ListBox1.Items.Add(TextBox.Text)
+        ListBox1.Items.Add('C0032')
+        ListBox1.Items.Add('C00422')
+        ListBox1.Items.Add('C00425')
+        ListBox1.Items.Add('C00532')
+        ListBox1.Items.Add('C03563')
+        ListBox1.Items.Add('C05321')
+       this.titleTextBox.Focus()
+
+    End Sub
+
+    Private Sub ListBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox2.SelectedIndexChanged
+        ListBox2_SelectedIndexChanged.Items.Add(TextBox.Text)
+
+        ListBox2.Items.Add('Ashley-Leigh')
+        ListBox2.Items.Add('Matthew')
+        ListBox2.Items.Add('Tyler')
+        ListBox2.Items.Add('Jason')
+        ListBox2.Items.Add('Osh')
+        ListBox2.Items.Add('Mark')
+
+    End Sub
+
+    Private Sub btn_CustomerGender_Click(sender As Object, e As EventArgs) Handles btn_CustomerGender.Click
+        Dim CustomerGender As Boolean
+        If Sex = "f" Then
+            Gender = "Female"
+        ElseIf Sex = "m" Then
+            Gender = "Male"
+        Else
+            Gender = "nonbinary/unknown"
+        End If
+
+    End Sub
+End Class
+
+End Sub
+Private Sub ButtonInsert_Click(sender As Object, e As EventArgs) Handles ButtonInsert.Click
+
+        Imports System.Data.Oledb
+	Dim con As New OledbConnection("Provider=microsoft.Jet.oledb.4.0DataSource=D:\mydata.mdb;") //change this 'DataSource URL' to your AccessDB location
+
+    Dim cmd As New OledbCommand
+
+    Public var1 As String
+
+    Public Sub New()
+        con.Open()
+
+        cmd.Connection = con
+        cmd.CommandText = "SELECT * FROM table1" //change the tablename as per your database
+
+    End Sub
+        insert_command.Parameters.Add("@fln", Provider=microsoft.Jet.oledb.4.0DataSource=D:\mydata.mdb;).Value = TextBox2.Text
+        insert_command.Parameters.Add("@adds", Provider=microsoft.Jet.oledb.4.0DataSource=D:\mydata.mdb;).Value = TextBox3.Text
+        insert_command.Parameters.Add("@brd", Provider=microsoft.Jet.oledb.4.0DataSource=D:\mydata.mdb;).Value = DateTimePicker1.Value
+
+        If execCommand(insert_command) Then
+            MessageBox.Show("Data Inserted")
+
+        Else
+            MessageBox.Show("Data NOT Inserted")
+        End If
+
+    End Sub
+
+
+
+Private Sub ButtonDelete_Click(sender As Object, e As EventArgs) Handles ButtonDelete.Click
+
+    Imports System.Data.Oledb
+	Dim con As New OledbConnection("Provider=microsoft.Jet.oledb.4.0DataSource=D:\mydata.mdb;") //change this 'DataSource URL' to your AccessDB location
+
+    Dim cmd As New OledbCommand
+
+    Public var1 As String
+
+    Public Sub New()
+        con.Open()
+
+        cmd.Connection = con
+        cmd.CommandText = "SELECT * FROM table1" //change the tablename as per your database
+
+    End Sub
+
+        If execCommand(delete_command) Then
+            MessageBox.Show("Data Deleted")
+
+        Else
+            MessageBox.Show("Data NOT Deleted")
+        End If
+
+    End Sub
+End Class
+
